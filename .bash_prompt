@@ -1,0 +1,33 @@
+# PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+GIT_PS1_SHOWDIRTYSTATE=1
+GIT_PS1_SHOWCOLORHINTS=1
+GIT_PS1_SHOWSTASHSTATE=1
+GIT_PS1_SHOWUPSTREAM="auto"
+
+Color_Off="\[\033[0m\]"
+Yellow="\[\033[0;33m\]"
+Red="\[\033[0;31m\]"
+Green="\[\033[0;32m\]"
+Cyan="\[\e[0;36m\]"
+Purple="\[\e[0;35m\]"
+
+function __exit_ps1 () {
+    EXIT="$1"
+    if [ $EXIT != "0" ]; then
+        echo "[$Red$EXIT$Color_Off] ";
+    else
+        echo "[$Green$EXIT$Color_Off] ";
+    fi
+}
+
+function __prompt_command () {
+        local EXIT="$?"
+	__EXIT_PS1=$(__exit_ps1 $EXIT)
+        __VIRTUALENV_PS1="${VIRTUAL_ENV:+[$Purple$(basename $VIRTUAL_ENV)$Color_Off] }"
+        __GIT_PS1=$(__git_ps1 "[$Cyan%s$Color_Off] ")
+        __DATE_PS1="[$Yellow$(date '+%Y-%m-%d %H:%M:%S')$Color_Off] "
+
+        export PS1="$__DATE_PS1$__VIRTUALENV_PS1$__GIT_PS1$__EXIT_PS1\u@\h:\W\\\$ "
+}
+
+export PROMPT_COMMAND=__prompt_command
