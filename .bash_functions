@@ -1,3 +1,11 @@
+function hypernode-status() {
+        echo
+        curl -i -H "Host: magweb" http://$1.hypernode.io/status.php
+        echo
+        echo
+
+}
+
 tag_release() {
 	major=$(date "+%Y%m%d")
 	minor=1
