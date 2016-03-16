@@ -1,0 +1,7 @@
+Package: *
+Pin: origin download.virtualbox.org
+Pin-Priority: 200
+
+Package: virtualbox-*
+Pin: origin download.virtualbox.org
+Pin-Priority: 600

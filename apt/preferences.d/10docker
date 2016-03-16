@@ -1,0 +1,7 @@
+Package: *
+Pin: origin apt.dockerproject.org
+Pin-Priority: 200
+
+Package: docker-engine
+Pin: origin apt.dockerproject.org
+Pin-Priority: 600
