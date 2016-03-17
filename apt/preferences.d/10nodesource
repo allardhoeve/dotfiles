@@ -1,0 +1,7 @@
+Package: *
+Pin: origin deb.nodesource.com
+Pin-Priority: 198
+
+Package: nodejs
+Pin: origin deb.nodesource.com
+Pin-Priority: 600
