@@ -1,0 +1,15 @@
+Package: *
+Pin: origin dl.google.com
+Pin-Priority: 199
+
+Package: google-chrome-stable
+Pin: origin dl.google.com
+Pin-Priority: 600
+
+Package: google-chrome-beta
+Pin: origin dl.google.com
+Pin-Priority: 600
+
+Package: google-chrome-unstable
+Pin: origin dl.google.com
+Pin-Priority: 600

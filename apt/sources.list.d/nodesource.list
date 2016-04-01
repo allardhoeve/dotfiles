@@ -1,1 +1,2 @@
-deb https://deb.nodesource.com/node_5.x precise main
+# apt-key adv --keyserver keys.gnupg.net --recv-keys 68576280
+deb https://deb.nodesource.com/node_5.x trusty main
