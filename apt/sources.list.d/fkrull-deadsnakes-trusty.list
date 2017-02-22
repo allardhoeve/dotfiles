@@ -1,0 +1,3 @@
+deb http://ppa.launchpad.net/fkrull/deadsnakes/ubuntu trusty main
+deb http://ppa.launchpad.net/fkrull/deadsnakes-python2.7/ubuntu trusty main
+# deb-src http://ppa.launchpad.net/fkrull/deadsnakes/ubuntu trusty main
